@@ -33,6 +33,7 @@ public class JavaInput {
         System.out.println("Enter the string s: ");
         s = sc.nextLine();
 
+        sc.close();
         // Integer value print
         System.out.println("The value of a is : " + a);
         System.out.println("The value of b is : " + b);
