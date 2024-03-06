@@ -148,7 +148,7 @@ public class BankAccount {
     }
 
     public void CallFunctions() {
-        scanner.nextLine();
+        // scanner.nextLine();
         System.out.println("1.To Deposite Amount.");
         System.out.println("2.To Withdraw Amount.");
         System.out.println("3.To Display details.");
@@ -167,6 +167,7 @@ public class BankAccount {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("--------------XYZ Bank , delhi,230880-----------");
         System.out.println("--------------Welcome-----------");
         BankAccount user = new BankAccount();
@@ -175,8 +176,9 @@ public class BankAccount {
         while (choice == 'y') {
             user.CallFunctions();
             System.out.println("Do you want to do again (y/n)!");
+            choice = scanner.next().charAt(0);
         }
-
+        scanner.close();
         System.out.println("--------------Thank you-----------");
     }
 }
